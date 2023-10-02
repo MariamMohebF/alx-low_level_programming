@@ -1,20 +1,16 @@
 #include <stdio.h>
 /**
- * main - Write a program that prints all arguments it receives
- *        All arguments should be printed, including the first on
+ * main - Write a program that prints the number of arguments passed into it
  *
- * @argc: This is the argument count 
+ * @args: This is the argument count
  * @argv: This is the argument vector
  *
- * Return: 0;
+ * Return: This return to 0
+ *
  */
-int main(int argc, char *argv[])
+int main(int args, char *argv[])
 {
-	int count;
-
-	for (count = 0; count < argc; count++)
-	{
-		printf("%s\n", argv[count]);
-	}
+	printf("%d\n", args - 1);
+	(void)argv;
 	return (0);
 }
