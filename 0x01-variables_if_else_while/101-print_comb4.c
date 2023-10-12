@@ -1,32 +1,28 @@
 #include <stdio.h>
 /**
-  * main - prints all possible different combinations of three digits
-  *
-  * Return: 0 if success
-**/
+ * main - print comp3
+ * Return: 0
+ */
 int main(void)
 {
+	int i, j, k;
 
-	int count;
-
-	for (count = 12; count < 1000; count++)
+	for (i = 0; i <= 7; i++)
 	{
-		int number1, number2, number3;
-		number1 = count / 100;
-		number2 = (count / 10) % 10;
-		number3 = x % 10;
-		if (number3 > number2 && number2 > number1)
+		for (j = i + 1; j <= 8; j++)
 		{
-			if (count > 12)
+			for (k = j + 1; k <= 9; k++)
 			{
-				putchar (',');
-				putchar (' ');
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+				if (i == 7)
+					break;
+				putchar(',');
+				putchar(' ');
 			}
-			putchar (number1 + 48);
-			putchar (number2 + 48);
-			putchar (number3 + 48);
 		}
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
