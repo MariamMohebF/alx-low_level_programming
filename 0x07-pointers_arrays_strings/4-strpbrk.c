@@ -8,7 +8,7 @@
  *    * @accept: pointer to string
  *     *
  *      * Return: ponter byte in s that matches accept
- *       */
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
